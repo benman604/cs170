@@ -3,20 +3,20 @@ import java.util.Scanner;
 public class WeightConvertorApp {
 
 	public static void main(String[] args) {
-		double input = 0;
 		Scanner keyboard = new Scanner(System.in);
 		
 		while(true) {
-			System.out.print("Enter weight: ");
-			input = keyboard.nextDouble();
+			System.out.println("Enter weight: ");
+			String input = keyboard.next();
 			
-			if(input == 0) {
-				System.out.println("nani?!");
+			try {
+				double weight = Double.parseDouble(input); 
+				WeightConvertor convertor = new WeightConvertor(weight);
+				convertor.Compute();
+			} 
+			catch(Exception e){
 				break;
 			}
-			
-			WeightConvertor convertor = new WeightConvertor(input);
-			convertor.Compute();
 		} 
 		
 		keyboard.close();
