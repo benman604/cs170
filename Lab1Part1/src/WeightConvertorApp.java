@@ -1,9 +1,16 @@
+/*
+ * Name: Benjamin Man
+ * Course: CS170-01
+ * Lab #: 1
+ * Submission Date: Sep 22 10PM
+ * Brief Description: Driver code to run WeightConvertor, create its object, and call its methods.
+ */
 
-public class WeightConvertorApp {
+public class WeightConvertorApp { // driver class
 
-	public static void main(String[] args) {
-		WeightConvertor convertor = new WeightConvertor(100);
-		convertor.Compute();
-	}
+	public static void main(String[] args) { // main method
+		WeightConvertor convertor = new WeightConvertor(100); // create WeightConverter object
+		convertor.Compute(); // call compute method
+	} // end main method
 
-}
+} // end driver class

@@ -1,18 +1,26 @@
-import java.util.Scanner;
-public class SquareCubeApp{
-	public static void main(String[] args){
-		Scanner keyboard = new Scanner(System.in);
+/*
+ * Name: Benjamin Man
+ * Course: CS170-01
+ * Lab #: 1
+ * Submission Date: Sep 22 10PM
+ * Brief Description: Driver class to collect input, create SquareCube objects, and call its methods.
+ */
 
-		System.out.print("Enter lower bound: ");
-		int lowerBound = keyboard.nextInt();
+import java.util.Scanner; // import scanner
+public class SquareCubeApp{ // driver class
+	public static void main(String[] args){ // main method
+		Scanner keyboard = new Scanner(System.in); // create scanner
 
-		System.out.print("Enter upper bound: ");
-		int upperBound = keyboard.nextInt();
+		System.out.print("Enter lower bound: "); // prompt input
+		int lowerBound = keyboard.nextInt(); // collect input
 
-		System.out.printf("%-10s %-10s %-10s\n", "Number", "Square", "Cube");
-		for(int i=lowerBound; i<=upperBound; i++){
-			SquareCube object = new SquareCube(i);
-			object.DisplayResult();
-		}
-	}
-}
+		System.out.print("Enter upper bound: "); // prompt input
+		int upperBound = keyboard.nextInt(); // collect input
+
+		System.out.printf("%-10s %-10s %-10s\n", "Number", "Square", "Cube"); // print header
+		for(int i=lowerBound; i<=upperBound; i++){ // loop through bounds
+			SquareCube object = new SquareCube(i); // create SquareCube object
+			object.DisplayResult(); // display result
+		} // end loop
+	} // end main method
+} // end driver class
