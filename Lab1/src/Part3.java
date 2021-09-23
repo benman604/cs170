@@ -3,10 +3,10 @@
  * Course: CS170-01
  * Lab #: 1
  * Submission Date: Sep 22 10PM
- * Brief Description: Driver class for square cube to create SquareCube objects and call their methods to display result.
+ * Brief Description: Driver class to create SquareCube objects and call their methods to display result.
  */
 
-public class SquareCubeApp{ // driver class
+public class Part3{ // driver class
 	public static void main(String[] args){ // main method
 		System.out.printf("%-10s %-10s %-10s\n", "Number", "Square", "Cube"); // print header
 		for(int i=1; i<=10; i++){ // loop through i=1 to i=10

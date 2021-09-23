@@ -9,7 +9,7 @@
 public class WeightConvertor { // Operation class
 	private double weight; // weight double
 	
-	public WeightConvertor(float weight) { // constructor method
+	public WeightConvertor(double weight) { // constructor method
 		this.weight = weight; // set weight
 	} // end constructor method
 	

@@ -7,7 +7,7 @@
  */
 
 import java.util.Scanner; // import scanner
-public class SquareCubeApp{ // driver class
+public class Part4{ // driver class
 	public static void main(String[] args){ // main method
 		Scanner keyboard = new Scanner(System.in); // create scanner
 
@@ -22,5 +22,7 @@ public class SquareCubeApp{ // driver class
 			SquareCube object = new SquareCube(i); // create SquareCube object
 			object.DisplayResult(); // display result
 		} // end loop
+		
+		keyboard.close(); // close input
 	} // end main method
 } // end driver class

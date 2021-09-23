@@ -9,14 +9,18 @@
 
 import java.util.Scanner; // import scanner
 
-public class WeightConvertorApp { // driver class
+public class Part2 { // driver class
 
 	public static void main(String[] args) { // main method
 		Scanner keyboard = new Scanner(System.in); // create scanner
 		
 		while(true) { // input loop
-			System.out.println("Enter weight: "); // prompt user
+			System.out.print("Enter weight: "); // prompt user
 			String input = keyboard.next(); // read input
+			
+			if(input.equals("n")) {
+				break;
+			}
 			
 			try { // attempt to parse input string as double
 				double weight = Double.parseDouble(input); // parse input string
@@ -24,7 +28,7 @@ public class WeightConvertorApp { // driver class
 				convertor.Compute(); // call compute method
 			} // end try
 			catch(Exception e){ // catch any exceptions
-				break;
+				System.out.println("ERROR: " + e.getMessage());
 			} // end try-catch
 		} // end input loop
 		
