@@ -1,0 +1,19 @@
+
+public class Testclass {
+
+	public static void main(String[] args) {
+		int entry = 9;
+		int number = 3;
+		if ((entry >= 9) && (entry/number != 3))
+
+		    entry--;
+
+		else if (entry == 9)
+
+		            ++entry;
+
+		        else entry = 3;
+		System.out.print(entry);
+	}
+
+}

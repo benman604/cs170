@@ -1,0 +1,41 @@
+import java.util.Scanner; 
+import java.math.BigDecimal;
+public class FutureValueBigDecimalApp {
+
+	public static void main(String[] args) {
+		String choice = "y",		//loop control initial value
+				   userName;
+		
+		while(choice.equalsIgnoreCase("y")) {
+			
+			FutureValueBigDecimal futureValue = new FutureValueBigDecimal();  //create an object of FutureValue
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("Welcome to future value application!\n\n");
+			
+			System.out.print("Please enter your name: ");
+			userName = sc.next();   //get name
+			futureValue.setName(userName);				//set user name
+			System.out.println();
+
+			BigDecimal investAmount = Validator.validateBigDecimalWithRange(sc, "enter your monthly invest: ", 0, 1000000); //verify data
+			futureValue.setMonthlyInvest(investAmount);		//set monthly invest
+
+			double interestRate = Validator.validateDoubleWithRange(sc, "enter your yearly interest rate: ", 0, 35); //verify data
+			futureValue.setYearlyRate(interestRate);			//set yearly rate
+
+			int years = Validator.validateIntWithRange(sc, "enter number of years: ", 0, 130); //verify data
+			futureValue.setYears(years);	
+			
+			futureValue.computeFutureValue();			//calculate
+			
+			futureValue.outputResult();  				//formatted output
+
+			choice = Validator.validateYN(sc, "continue? (y/n): ");	//ask for continue or no
+	 	} //end of while
+
+	 	System.out.println("\nThank you for using future value application.");
+
+	}
+
+}

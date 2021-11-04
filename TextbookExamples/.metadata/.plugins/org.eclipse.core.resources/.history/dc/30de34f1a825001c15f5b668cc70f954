@@ -1,0 +1,68 @@
+
+import java.math.BigDecimal;
+public class FutureValueBigDecimal { // Operation class
+	// Initialize variables
+	String name;
+	BigDecimal monthlyInvestment;
+	BigDecimal yearlyRate;
+	BigDecimal futureValue;
+	int years;
+	
+	// Getters and Setters for instance variables
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public BigDecimal getMonthlyInvestment() {
+		return monthlyInvestment;
+	}
+	public void setMonthlyInvestment(BigDecimal monthlyInvestment) {
+		this.monthlyInvestment = monthlyInvestment;
+	}
+	public BigDecimal getYearlyRate() {
+		return yearlyRate;
+	}
+	public void setYearlyRate(BigDecimal yearlyRate) {
+		this.yearlyRate = yearlyRate;
+	}
+	public BigDecimal getFutureValue() {
+		return futureValue;
+	}
+	public void setFutureValue(BigDecimal futureValue) {
+		this.futureValue = futureValue;
+	}
+	public int getYears() {
+		return years;
+	}
+	public void setYears(int years) {
+		this.years = years;
+	}
+	
+	public void computeFutureValue() { // Method to compute future value
+		BigDecimal monthlyRate = yearlyRate.divide(new BigDecimal(12 * 100));
+		int months = years * 12;
+		int i = 0;
+		while(i <= months) {
+			// calculate future value
+			futureValue = futureValue.add(monthlyInvestment).multiply((monthlyRate.add(new BigDecimal(1))));
+			i++;
+		}
+	}
+	
+	public void outputResult() {
+		String message = "Your future value report: " 
+				        + "Name: " + name + "\nMonthly investment: "				//build output message
+				 		+ FormattedOutput.currencyOutput(monthlyInvestment)
+				 		+ "\nYearly interest rate: "
+						+ FormattedOutput.percentOutput(yearlyRate, 2)
+						+ "\nInvest years: " + years
+						+ "\nFuture return: " + FormattedOutput.currencyOutput(futureValue);							
+				
+		System.out.println(message);
+	}
+	
+	
+	
+} // End operation class
