@@ -11,13 +11,22 @@ import java.util.ArrayList;
 public class Transcript {
 	private ArrayList<Course> courses = new ArrayList<Course>();
 	
+	public int getCoursesLength() {
+		return courses.size();
+	}
+	
 	public void AddCourse(String studentName, String courseTitle, int credit, char finalGrade) {
 		Course newCourse = new Course(studentName, courseTitle, credit, finalGrade);
 		courses.add(newCourse);
 	}
 	
 	public void RemoveCourse(int index) {
-		courses.remove(index);
+		try {
+			courses.remove(index);
+		}
+		catch(IndexOutOfBoundsException ex) {
+			System.out.println("Error: " + ex.getMessage());
+		}
 	}
 	
 	public void Sort(String by) {
@@ -26,7 +35,7 @@ public class Transcript {
 	
 	public int Search(String courseTitle) {
 		for(Course i : courses) {
-			if(i.getCourseTitle() == courseTitle) {
+			if(i.getCourseTitle().equalsIgnoreCase(courseTitle)) {
 				return courses.indexOf(i);
 			}
 		}
@@ -34,12 +43,16 @@ public class Transcript {
 	}
 	
 	public void Print(int index) {
-		Course mycourse = courses.get(index);
-		System.out.println(
-				"------------------------\n" +
-				"Course Title: " + mycourse.getCourseTitle() + "\n" +
-				"Credits: " + mycourse.getCredit() + "\n" +
-				"Final Grade: " + mycourse.getFinalGrade()
-		);
+		try {
+			Course mycourse = courses.get(index);
+			System.out.println(
+					"------------------------\n" +
+					"Course Title: " + mycourse.getCourseTitle() + "\n" +
+					"Credits: " + mycourse.getCredit() + "\n" +
+					"Final Grade: " + mycourse.getFinalGrade()
+			);
+		} catch (Exception ex) {
+			System.out.println(ex.getMessage());
+		}
 	}
 }

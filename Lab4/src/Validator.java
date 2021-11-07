@@ -39,7 +39,7 @@ public class Validator {
 	
 	public static char validataCharWithRange(Scanner sc, String prompt, char min, char max) {
 		boolean isValid = false;
-		char data;
+		char data = 'a';
 		sc.nextLine();								//Clear the buffer
 
 		 while(!isValid) {
@@ -49,7 +49,7 @@ public class Validator {
 				throw new NumberFormatException("\nData input error.  Please enter an character type data...");
 			String input = sc.next();
 			if(input.length() > 1) {
-				throw new Exception("Data input error.  Please enter an character type data...")
+				throw new Exception("Data input error.  Please enter an character type data...");
 			}
 			data = input.charAt(0);
 			
@@ -68,4 +68,6 @@ public class Validator {
 		} 						//End of while
 		return data;
 	}
+	
+	
 }
