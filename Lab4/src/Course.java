@@ -3,10 +3,10 @@
  * Course: CS170-01
  * Lab #: 4
  * Submission Date: Wed Nov 10, 2021 10pm
- * Brief Description: 
+ * Brief Description: Class to store instances of courses
  */
 
-public class Course {
+public class Course { 
 	// instance variables
 	private String studentName;
 	private String courseTitle;

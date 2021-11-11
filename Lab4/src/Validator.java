@@ -3,7 +3,7 @@
  * Course: CS170-01
  * Lab #: 4
  * Submission Date: Wed Nov 10, 2021 10pm
- * Brief Description: 
+ * Brief Description: Validator class to collect and validate input
  */
 
 import java.util.Scanner;
@@ -53,8 +53,8 @@ public class Validator {
 			}
 			data = input.charAt(0);
 			
-			if (data < min || data > max) 				//less than min
-					throw new Exception("Data is out of range " + min + " - " + max);		//Throw the exception
+			if (data < min || data > max || data == 'E') 				//less than min (also no "e")
+					throw new Exception("Data is out of range " + min + " - " + max + " (No Es)");		//Throw the exception
 			isValid = true;   //otherwise data is correct
 		  }		//End of try
 		catch (NumberFormatException e) {
