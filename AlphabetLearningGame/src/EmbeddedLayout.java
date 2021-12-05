@@ -7,10 +7,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 public class EmbeddedLayout {
-	protected AlphabetLearningApp parent;
+	protected ExtendableLayout parent;
 	protected VBox layout;
 	
-	public EmbeddedLayout(AlphabetLearningApp parent, String backgroundColor) {
+	public EmbeddedLayout(ExtendableLayout parent, String backgroundColor) {
 		this.parent = parent;
 		layout = new VBox();
         BackgroundFill fill = new BackgroundFill(Color.web(backgroundColor), CornerRadii.EMPTY, Insets.EMPTY);

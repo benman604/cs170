@@ -1,9 +1,14 @@
+/**
+ * Class for a deck of cards
+ * @author Benjamin Man
+ */
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-	protected ArrayList<Card> cards = new ArrayList<Card>();
+	protected ArrayList<Card> cards = new ArrayList<Card>(); // array of cards
 
+	// setters and getters
 	public ArrayList<Card> getCards() {
 		return cards;
 	}
@@ -17,12 +22,12 @@ public class Deck {
 	}
 	
 	public void shuffle() {
-		Collections.shuffle(cards);
+		Collections.shuffle(cards); // shuffle deck
 	}
 	
 	public void printCards() {
 		for(Card card : cards) {
-			System.out.println(card.value + " of " + card.suit);
+			card.printCard(); // print all cards
 		}
 	}
 }

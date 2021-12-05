@@ -1,11 +1,18 @@
+/**
+ * Driver class for card deck operations
+ * @author Benjamin Man
+ */
+
 import java.util.Scanner;
 
-public class CardDeckOperatorApp {
-	public static void main(String args[]) {
+public class CardDeckOperatorApp { 
+	public static void main(String args[]) { 
 		CardDeckOperator deck = new CardDeckOperator();
+		
 		System.out.println("Shuffling...");
 		deck.shuffle();
 		deck.printCards();
+		
 		System.out.println("Decking by suit...");
 		for(Deck d : deck.deckBySuit()) {
 			System.out.println("____________");
@@ -34,6 +41,10 @@ public class CardDeckOperatorApp {
 		System.out.println("Finding adjacent pairs...");
 		for(int index : deck.findAdjacentPair()) {
 			System.out.print(index + ", ");
+			deck.getCards().get(index).printCard();
+			System.out.print(index + 1 + ", ");
+			deck.getCards().get(index + 1).printCard();
+			System.out.println();
 		}
 	}
 }

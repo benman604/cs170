@@ -25,7 +25,7 @@ import javafx.scene.paint.Color;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 
-public class AlphabetLearningApp extends Application { // driver class
+public class AlphabetLearningApp extends Application implements ExtendableLayout { // driver class
 	private BorderPane pane = new BorderPane();
 	
 	public static void main(String[] args) { // main method
