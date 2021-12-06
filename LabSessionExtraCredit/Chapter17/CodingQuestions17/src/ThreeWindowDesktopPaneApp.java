@@ -27,19 +27,14 @@ public class ThreeWindowDesktopPaneApp extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
-    private JDesktopPane jd = new JDesktopPane();
     
+    private JDesktopPane jd = new JDesktopPane();
+            
     ThreeWindowDesktopPaneApp()
     {
-    	TextFileWordCounterApp app1 = new TextFileWordCounterApp();
-    	TextColorChooserApp app2 = new TextColorChooserApp();
         setTitle("JInternalFrame");
-        
-        setJInternalFrame(jd,"InternalFrame1",30,30, app1.getContents());
-        setJInternalFrame(jd,"InternalFrame2",60,60, app2.getContents());
+        setJInternalFrame(jd,"Text Color Chooser",30,30, 1);
+        setJInternalFrame(jd,"Word Counter",60,60, 2);
         setJDesktopPane();
         setSize(700,400);
         setVisible(true);
@@ -51,13 +46,20 @@ public class ThreeWindowDesktopPaneApp extends JFrame {
         add(jd);
     }
     
-    void setJInternalFrame(JDesktopPane jd,String name,int loc1,int loc2, JPanel contents)
+    void setJInternalFrame(JDesktopPane jd,String name,int loc1,int loc2, int which)
     {
         JInternalFrame jn = new JInternalFrame(name,true,true,true,true);
-        jn.setContentPane(contents);
+        jn.setLayout(new FlowLayout());
+        jn.setSize(300, 300);
+        if(which == 1) {
+        	TextColorChooserApp a1 = new TextColorChooserApp();
+        	jn.add(a1.getContents());
+        } else {
+        	TextFileWordCounterApp a1 = new TextFileWordCounterApp();
+        	jn.add(a1.getContents());
+        }
         jn.setLocation(loc2, loc2);
         jn.setVisible(true);
         jd.add(jn);
     }
-
 }
