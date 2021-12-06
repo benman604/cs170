@@ -171,10 +171,15 @@ public class MainFrame extends JFrame
 		});
 		
 		// Implement Play button
-		/* btnNewButton_2.addActionListener(new ActionListener() {
+		PLAY_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				stop();
+				dispose();
+				Game game = new Game();
+				game.setLocationRelativeTo(null);
+				game.setVisible(true);
 			}
-		}); */
+		}); 
 		
 	}
 	

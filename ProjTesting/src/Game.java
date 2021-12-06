@@ -78,13 +78,13 @@ public class Game extends JFrame implements ActionListener
 		{
 				{"A", "B", "F", "O"},
 				{"X", "A", "H", "J"},
-				{"B", "O", "W", "T"},
+				{"B", "O", "W", "G"},
 				{"H", "S", "X", "U"},
 				{"S", "Q", "R", "P"},
-				{"I", "D", "G", "S"},
+				{"I", "B", "G", "S"},
 				{"O", "U", "N", "B"},
 				{"R", "P", "B", "V"},
-				{"Y", "G", "Z", "I"},
+				{"Y", "G", "Z", "N"},
 				{"C", "P", "L", "S"}
 		};
 	
@@ -113,6 +113,7 @@ public class Game extends JFrame implements ActionListener
 	private JPanel contentPane;
 	private Panel panel_1;
 	private JTextField txtAlphabetLearner;
+	private JTextField scoreText;
 
 	/**
 	 * Launch the application.
@@ -190,6 +191,14 @@ public class Game extends JFrame implements ActionListener
 		txtAlphabetLearner.setBounds(0, 0, 271, 120);
 		txtAlphabetLearner.setEditable(false);
 		panel.add(txtAlphabetLearner);
+		
+		scoreText = new JTextField();
+		scoreText.setText("Score: 0/0");
+		scoreText.setHorizontalAlignment(SwingConstants.CENTER);
+		scoreText.setFont(new Font("Comic Sans MS", Font.PLAIN, 30));
+		scoreText.setEditable(false);
+		scoreText.setBounds(0, 608, 271, 120);
+		panel.add(scoreText);
 		//txtAlphabetLearner.setColumns(10);
 		
 		choice1 = new JButton();
@@ -267,6 +276,7 @@ public class Game extends JFrame implements ActionListener
 	// ask question
 	public void nextQuestion()
 	{
+		scoreText.setText("Score: " + point + "/" + visited.size());
 		if(visited.size() >= total_questions) // user completed all questions
 		{
 			System.out.println("Points: " + point);
