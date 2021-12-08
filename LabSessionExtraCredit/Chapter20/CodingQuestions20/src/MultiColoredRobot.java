@@ -1,3 +1,6 @@
+/*
+ * AWT app driver class to create robot using paint graphics
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Rectangle;
@@ -43,15 +46,15 @@ public class MultiColoredRobot extends JFrame {
 	}
 	
     @Override
-    public void paint(Graphics g) 
+    public void paint(Graphics g) // paints robot
     {
     	g.setColor(Color.GREEN);
-        g.fillOval(200-105/2, 100, 105, 75);
+        g.fillOval(200-105/2, 100, 105, 75); // oval head
         g.setColor(Color.RED);
-        g.fillRect(200-50/2, 170, 50, 100);
-        g.fillOval((200-105/2) + 70, 120, 20, 20);
+        g.fillRect(200-50/2, 170, 50, 100); // body
+        g.fillOval((200-105/2) + 70, 120, 20, 20); // circular eyes
         g.fillOval((200-105/2) + 20, 120, 20, 20);
         g.setColor(Color.BLACK);
-        g.fillRect((200-105/2) + 45, 150, 50, 10);
+        g.fillRect((200-105/2) + 45, 150, 50, 10); // rect mouth
     }
 }

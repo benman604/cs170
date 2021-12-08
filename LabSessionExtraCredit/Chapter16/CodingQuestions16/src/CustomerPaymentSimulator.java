@@ -1,3 +1,6 @@
+/*
+ * JavaAWT app driver class to create customer payment simulator layout and app
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -100,7 +103,7 @@ public class CustomerPaymentSimulator extends JFrame {
 		panel_1.add(lblNewLabel);
 		
 		JList cardType = new JList();
-		cardType.setModel(new AbstractListModel() {
+		cardType.setModel(new AbstractListModel() { // list of credit card methods
 			String[] values = new String[] {"Visa", "Master Card", "American Express"};
 			public int getSize() {
 				return values.length;
@@ -137,11 +140,11 @@ public class CustomerPaymentSimulator extends JFrame {
 		JLabel lblNewLabel_2 = new JLabel("Expiration Date: ");
 		panel_3.add(lblNewLabel_2);
 		
-		JComboBox expDateMonth = new JComboBox();
+		JComboBox expDateMonth = new JComboBox(); // months
 		expDateMonth.setModel(new DefaultComboBoxModel(new String[] {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}));
 		panel_3.add(expDateMonth);
 		
-		JComboBox expDateYear = new JComboBox();
+		JComboBox expDateYear = new JComboBox(); // years
 		expDateYear.setModel(new DefaultComboBoxModel(new String[] {"2021", "2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029", "2030"}));
 		panel_3.add(expDateYear);
 		
@@ -161,8 +164,8 @@ public class CustomerPaymentSimulator extends JFrame {
 		JButton exitButton = new JButton("Exit");
 		panel_4.add(exitButton);
 
-		acceptButton.addActionListener(e->{
-			JOptionPane pane = new JOptionPane();
+		acceptButton.addActionListener(e->{ // submit button click listener
+			JOptionPane pane = new JOptionPane(); // display data in joptionpane
 			JOptionPane.showMessageDialog(pane, "Inputed data: \n"
 					+ "Billing Method: " + billingMethod + "\n"
 					+ "Card Type: " + cardType.getSelectedValue() + "\n"
@@ -171,7 +174,7 @@ public class CustomerPaymentSimulator extends JFrame {
 					+ "Verified: " + verifiedBox.isSelected());
 		});
 		
-		exitButton.addActionListener(e->{
+		exitButton.addActionListener(e->{ // exit button click listener
 			dispose();
 		});
 	}

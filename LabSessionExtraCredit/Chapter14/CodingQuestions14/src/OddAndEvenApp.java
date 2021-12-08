@@ -1,3 +1,6 @@
+/*
+ * Driver class to test EvenOddThread
+ */
 public class OddAndEvenApp { // driver class
 
 	public static void main(String[] args) { // main method

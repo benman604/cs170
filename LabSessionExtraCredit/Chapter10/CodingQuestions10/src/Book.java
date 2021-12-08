@@ -1,15 +1,19 @@
-
+/*
+ * Data class to store values of books
+ * @author Benjamin Man
+ */
 public class Book {
 	private String name;
 	private double price;
 	private int quantity;
 	
-	public Book(String name, double price, int quantity) {
+	public Book(String name, double price, int quantity) { // constructor
 		this.name = name;
 		this.price = price;
 		this.quantity = quantity;
 	}
 
+	// setters and getters
 	public String getName() {
 		return name;
 	}

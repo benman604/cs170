@@ -6,19 +6,23 @@
 import java.util.Scanner;
 
 public class CardDeckOperatorApp { 
-	public static void main(String args[]) { 
+	public static void main(String args[]) { // main method
 		CardDeckOperator deck = new CardDeckOperator();
 		
+		// shuffle and print
 		System.out.println("Shuffling...");
 		deck.shuffle();
 		deck.printCards();
 		
+		// deck by suit and print each deck
 		System.out.println("Decking by suit...");
 		for(Deck d : deck.deckBySuit()) {
 			System.out.println("____________");
 			d.printCards();
 		}
 		
+		
+		// get players, split accordingly, print each player's deck
 		Scanner sc = new Scanner(System.in);
 		while(true) {
 			System.out.println("How many players? (2 or 4) > ");
@@ -38,6 +42,7 @@ public class CardDeckOperatorApp {
 		}
 		sc.close();
 		
+		// find adjacent pairs
 		System.out.println("Finding adjacent pairs...");
 		for(int index : deck.findAdjacentPair()) {
 			System.out.print(index + ", ");

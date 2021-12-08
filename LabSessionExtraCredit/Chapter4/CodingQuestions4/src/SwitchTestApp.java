@@ -1,3 +1,6 @@
+/*
+ * Driver class to test switch/case statement
+ */
 import java.util.Scanner;
 public class SwitchTestApp{
 

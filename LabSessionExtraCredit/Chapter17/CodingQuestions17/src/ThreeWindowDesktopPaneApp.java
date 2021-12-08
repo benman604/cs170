@@ -1,3 +1,6 @@
+/*
+ * Desktop pane app containing TextFileWordCounterApp and TextColorChooserApp
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.FlowLayout;
@@ -33,7 +36,7 @@ public class ThreeWindowDesktopPaneApp extends JFrame {
     ThreeWindowDesktopPaneApp()
     {
         setTitle("JInternalFrame");
-        setJInternalFrame(jd,"Text Color Chooser",30,30, 1);
+        setJInternalFrame(jd,"Text Color Chooser",30,30, 1); // create 2 internal frames
         setJInternalFrame(jd,"Word Counter",60,60, 2);
         setJDesktopPane();
         setSize(700,400);
@@ -52,7 +55,7 @@ public class ThreeWindowDesktopPaneApp extends JFrame {
         jn.setLayout(new FlowLayout());
         jn.setSize(300, 300);
         if(which == 1) {
-        	TextColorChooserApp a1 = new TextColorChooserApp();
+        	TextColorChooserApp a1 = new TextColorChooserApp(); // add inner frame with corresponding class
         	jn.add(a1.getContents());
         } else {
         	TextFileWordCounterApp a1 = new TextFileWordCounterApp();

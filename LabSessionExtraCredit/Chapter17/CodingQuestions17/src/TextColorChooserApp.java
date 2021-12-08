@@ -1,3 +1,6 @@
+/*
+ * Java AWT app driver class to create text color chooser and text
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -49,18 +52,18 @@ public class TextColorChooserApp extends JFrame {
 		panel.add(inputField);
 		inputField.setColumns(10);
 		
-		JLabel textOutput = new JLabel("Type something...");
+		JLabel textOutput = new JLabel("Type something..."); // text containing input
 		panel.add(textOutput);
 		
-		JButton submitButton = new JButton("Submit");
+		JButton submitButton = new JButton("Submit"); // submit button
 		panel.add(submitButton);
 		submitButton.addActionListener(e->{
 			textOutput.setText(inputField.getText());
 		});
 		
-		JColorChooser colorChooser = new JColorChooser(textOutput.getForeground());
+		JColorChooser colorChooser = new JColorChooser(textOutput.getForeground()); // color chooser
 		contentPane.add(colorChooser, BorderLayout.NORTH);
-		colorChooser.getSelectionModel().addChangeListener(e->{
+		colorChooser.getSelectionModel().addChangeListener(e->{ // set color on change
 			textOutput.setForeground(colorChooser.getColor());
 		});
 	}

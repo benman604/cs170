@@ -1,4 +1,6 @@
-
+/*
+ * Operation class to extend thread and print even or odd numbers
+ */
 public class EvenOddThread extends Thread implements Runnable{ // operation class
 	boolean isEven; // true if thread prints even numbers
 	

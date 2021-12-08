@@ -1,3 +1,6 @@
+/*
+ * Driver class to test Result
+ */
 import java.util.Scanner; // import scanner
 public class ResultApp{ // driver class
 

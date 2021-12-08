@@ -1,3 +1,6 @@
+/*
+ * AWT app driver class to create no smoking banner
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -47,18 +50,18 @@ public class NoSmokingSign extends JFrame {
 		gbl_contentPane.rowWeights = new double[]{1.0, Double.MIN_VALUE};
 		contentPane.setLayout(gbl_contentPane);
 		
-		JPanel panel = new JPanel();
+		JPanel panel = new JPanel(); // outer panel
 		panel.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		GridBagConstraints gbc_panel = new GridBagConstraints();
 		gbc_panel.gridx = 0;
 		gbc_panel.gridy = 0;
 		contentPane.add(panel, gbc_panel);
 		
-		JPanel panel_1 = new JPanel();
+		JPanel panel_1 = new JPanel(); // inner panel
 		panel_1.setBackground(Color.RED);
 		panel.add(panel_1);
 		
-		JLabel lblNewLabel = new JLabel("NO SMOKING");
+		JLabel lblNewLabel = new JLabel("NO SMOKING"); // label inside panel
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 44));
 		panel_1.add(lblNewLabel);
 	}

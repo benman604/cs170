@@ -1,4 +1,6 @@
-
+/*
+ * JavaFx app driver class to count words inputed in a text field
+ */
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;

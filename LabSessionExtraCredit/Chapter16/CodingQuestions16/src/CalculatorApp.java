@@ -1,3 +1,7 @@
+/*
+ * JavaAWT app driver class to create layout for calculator
+ * non functional, just a layout
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -42,6 +46,7 @@ public class CalculatorApp extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		// create input
 		textField = new JTextField();
 		textField.setBounds(10, 11, 414, 20);
 		contentPane.add(textField);
@@ -58,6 +63,8 @@ public class CalculatorApp extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
+		
+		// create buttons
 		btnNewButton.setBounds(0, 0, 45, 45);
 		panel.add(btnNewButton);
 		

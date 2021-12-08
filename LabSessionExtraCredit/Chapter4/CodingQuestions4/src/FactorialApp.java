@@ -1,3 +1,6 @@
+/*
+ * Driver class to find factorial of an integer
+ */
 import java.util.Scanner;
 public class FactorialApp {
 	
@@ -6,9 +9,9 @@ public class FactorialApp {
 	    System.out.println("Enter an integer 0-25: ");
 	    int n = sc.nextInt();
 	    int result = n;
-	    for(int i=n-1; i>0; i--) {
-	        result *= i;
+	    for(int i=n-1; i>0; i--) { // loop through number from self down to 0
+	        result *= i; // multiply result 
 	    }
-	    System.out.println(n + "! = " + result);
+	    System.out.println(n + "! = " + result); // print result
 	}
 }

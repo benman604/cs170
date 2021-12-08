@@ -1,4 +1,6 @@
-
+/*
+ * Operation subclass of Circle for Cone
+ */
 public class Cone extends Circle{ // Inherit circle
 	double height; // height variable
 	

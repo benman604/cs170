@@ -1,3 +1,6 @@
+/*
+ * Operation class for employee 
+ */
 import java.text.NumberFormat;
 
 public class Employee implements Printable, EmployeeType, Cloneable {
