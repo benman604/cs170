@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  * Driver code for app that prompts user to choose file and displays the number of words in that file.
- * @author Ben
+ * @author Benjamin Man
  *
  */
 public class TextFileWordCounterApp extends JFrame { 
