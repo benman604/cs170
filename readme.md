@@ -1,2 +1,2 @@
 # CS-170 Labs
-Ohlone CS with Yong Gao
+Intermediate Java Programming with Yong Gao @ Ohlone
